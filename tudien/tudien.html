@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input" >
+<input type="button" onclick="search();" value="Tim kiem">
+<div id="result"></div>
+<script>
+    var arr_ta=['red','yellow','blue','green'];
+    var arr_tv=['do','vang','xanh','green'];
+
+    function search()
+    {
+        let a =document.getElementById('input').value;
+
+       // document.getElementById('result').innerHTML=a;
+        for (let i=0 ;i<4;i++)
+        {
+            //arr_ta.indexOf(a) !==-1 lay ra vi tri cua gia tri a trong mang
+            //tra ve -1 khong xay ra,xay ra neu khac -1
+            //arr_tv[arr_ta.indexOf(a)];
+            if(arr_ta[i]==a)
+            {
+                document.getElementById('result').innerHTML="Co nghia TV :"+arr_tv[i];
+                break;
+            }
+            else {
+                document.getElementById('result').innerHTML='khong co trong tu dien';
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
